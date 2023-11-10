@@ -1,0 +1,75 @@
+.title
+  font-size: 40px
+  font-weight: 700
+  line-height: normal
+  text-align: center
+
+.checkbox
+  position: relative
+  display: flex
+  align-items: center
+  gap: 10px
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+
+.checkbox input
+  position: absolute
+  opacity: 0
+  cursor: pointer
+  height: 0
+  width: 0
+
+
+.checkmark 
+  height: 30px
+  width: 30px
+  border: 1px solid #B4B4B4
+  border-radius: 5px
+
+
+.checkmark:after 
+  content: ""
+  position: absolute
+  display: none
+
+
+.checkbox input:checked ~ .checkmark:after 
+  display: block
+
+
+.checkbox .checkmark:after 
+  left: 13px
+  top: 9px
+  width: 6px
+  height: 12px
+  border: solid #E83801
+  border-width: 0 3px 3px 0
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+
+.remember_me
+  color: #656565
+  font-size: 16px
+  cursor: pointer
+
+.forgot_pas
+  font-size: 14px
+  letter-spacing: -0.14px
+  color: #014E87
+  cursor: pointer
+
+.register
+  color: #656565
+  font-size: 14px
+  text-align: center
+  margin-top: 15px
+
+.register_link
+  font-size: 12px
+  color: #2D6CB4

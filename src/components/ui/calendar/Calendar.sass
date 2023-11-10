@@ -1,0 +1,169 @@
+:root 
+  --color-text: #434141
+  --color-placeholder: rgba(0, 0, 0, 0.5)
+  --color-additional: #93b1ff
+  --color-additional7: rgba(147, 177, 255, 0.7)
+  --background-color-calendar: #ededed
+  --background-color-calendar-header: #ffffff
+  --images-arrow: url('/arrow.svg')
+
+
+:root 
+  --color-text: #434141
+  --color-placeholder: rgba(0, 0, 0, 0.5)
+  --color-additional: rgb(100, 188, 255)
+  --color-additional7: rgba(100, 188, 255, 0.7)
+  --background-color-calendar: #ededed
+  --background-color-calendar-header: rgb(136, 202, 252)
+
+  --images-arrow: url('/arrow_white.svg')
+
+
+:root 
+  --color-text: #ffffff
+  --color-placeholder: rgba(255, 255, 255, 0.5)
+  --color-additional: #93b1ff
+  --color-additional7: rgba(147, 177, 255, 0.7)
+  --background-color-calendar: #3a3e42
+  --background-color-calendar-header: #575c63
+
+  --images-arrow: url('/arrow.svg')
+
+  
+.calendar 
+  width: 440px
+  margin: 0 auto
+
+  @media ( max-width: 639px )
+    width: 100%
+    
+
+
+.calendar__header 
+  position: relative
+  color: #000
+  text-align: center
+  font-size: 20px
+  font-style: normal
+  font-weight: 500
+  line-height: 32px
+
+  @media ( max-width: 639px )
+    font-size: 16px
+    line-height: normal
+
+
+.calendar__body 
+  border-radius: 0 0 5px 5px
+  padding: 5px
+
+
+.calendar__week__names
+  color: #515151
+  font-size: 12px
+  font-style: normal
+  font-weight: 400
+  line-height: normal
+  text-align: center
+  display: grid
+  grid-template-columns: repeat(7, 1fr)
+  gap: 3px 3px
+
+  @media ( max-width: 639px )
+    font-size: 10px
+
+
+.calendar__days 
+  margin-top: 10px
+  color: #E83801
+  font-family: Inter
+  font-size: 14px
+  font-style: normal
+  font-weight: 500
+  line-height: normal
+  text-align: center
+  display: grid
+  text-align: center
+  align-items: center
+  grid-template-columns: repeat(7, 1fr)
+  grid-template-rows: 1fr
+  gap: 3px 3px
+
+  @media ( max-width: 639px )
+    font-size: 10px
+
+
+.calendar__day 
+  border-radius: 5px
+  border: 1px solid #E83801
+  width: 60px
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 300
+  margin: 0 auto
+  cursor: pointer
+  transition: all .25s ease
+
+  @media ( max-width: 639px )
+    border-radius: 2px
+    width: 30px
+    height: 30px
+
+
+.calendar__day:hover 
+  color: #fff
+  background-color: #E83801
+
+
+.calendar__additional__day 
+  cursor: pointer
+  background-color: #E9E9E9
+  color: #857D7D
+  border: none
+
+.calendar__additional__day:hover
+  background-color: #E9E9E9
+  color: #857D7D
+
+
+.calendar__pick__item 
+  padding: 9px 0px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  border-radius: 5px
+
+
+.calendar__pick__item:hover 
+  background-color: var(--color-additional7)
+
+
+.calendar__today__item 
+  color: #fff
+  background-color: lighten(#E83801, 15)
+
+
+.calendar__selected__item 
+  color: #fff
+  background-color: #E83801
+
+
+
+.calendar__pick__items__container 
+  font-weight: 400
+  color: var(--color-text)
+  text-align: center
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(4, 1fr)
+  gap: 1px 1px
+  font-size: 12px
+
+
+.calendar__unchoosable__year 
+  font-weight: 300
+  padding: 9px 16px
+  color: var(--color-placeholder)

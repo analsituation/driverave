@@ -1,0 +1,54 @@
+.menu_wrapper
+  @apply z-30 fixed top-0 right-0 bottom-0 p-[30px] bg-white overflow-hidden
+  border-bottom-left-radius: 20px
+  border-top-left-radius: 20px
+  width: 560px
+  transform: translateX(100%)
+  transition: all .3s ease
+
+  @media ( max-width: 767px )
+    width: 100%
+    border-radius: 0
+
+  &.active
+    transform: translateX(0)
+
+  
+.menu
+  @apply flex flex-col justify-center h-full w-full
+
+.overlay
+  @apply z-20 absolute top-0 right-0 left-0 bottom-0 bg-slate-400
+  background-color: #6A1A00
+
+  &.overlay_open
+    display: block
+    opacity: .3
+    animation: .3s overlay_show
+  
+  &.overlay_hidden
+    display: none
+    opacity: 0
+    animation: .3s overlay_hide
+
+
+@keyframes overlay_show
+  0%
+    display: none
+    opacity: 0
+  100%
+    display: block
+    opacity: .3
+
+@keyframes overlay_hide
+  0%
+    opacity: .3
+    display: block
+  100%
+    display: none
+    opacity: 0
+   
+  
+  
+
+
